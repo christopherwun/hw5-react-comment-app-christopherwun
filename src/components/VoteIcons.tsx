@@ -9,17 +9,17 @@ export default function VoteIcons() {
         id="upvoteButton"
         // className="input"
         onClick={() => {
-            setUpvotes(upvotes + 1);
+          setUpvotes(upvotes + 1);
         }}
       >
         +
       </button>
-        <p>{upvotes}</p>
+      <p>{upvotes}</p>
       <button
         id="downvoteButton"
         // className="input"
         onClick={() => {
-            setUpvotes(upvotes - 1);
+          setUpvotes(upvotes - 1);
         }}
       >
         -

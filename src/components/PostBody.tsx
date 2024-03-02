@@ -27,8 +27,7 @@ export default function PostBody({
       return;
     }
     setReply(!reply);
-    }
-
+  }
 
   function updateComments(name: string, body: string) {
     const newComment: CommentTreeNode = {
@@ -55,19 +54,19 @@ export default function PostBody({
         </div>
       </div>
       {/* only show reply btn if checkdepth false */}
-        {checkDepth(comment) ? null : (
-            <div>
-            {/* Reply Button */}
-            <button
-                className="input"
-                onClick={() => {
-                updateReply();
-                }}
-            >
-                Reply
-            </button>
-            </div>
-        )}
+      {checkDepth(comment) ? null : (
+        <div>
+          {/* Reply Button */}
+          <button
+            className="input"
+            onClick={() => {
+              updateReply();
+            }}
+          >
+            Reply
+          </button>
+        </div>
+      )}
 
       {/* Prompt if reply */}
       {reply ? <Prompt updateComments={updateComments} /> : null}
